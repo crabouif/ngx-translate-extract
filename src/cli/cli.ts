@@ -17,6 +17,7 @@ import { PurgeObsoleteKeysPostProcessor } from '../post-processors/purge-obsolet
 import { CompilerInterface } from '../compilers/compiler.interface.js';
 import { CompilerFactory } from '../compilers/compiler.factory.js';
 import { normalizePaths } from '../utils/fs-helpers.js';
+import { TagParser } from '../parsers/tag.parser.js';
 // import { donateMessage } from '../utils/donate.js';
 
 // First parsing pass to be able to access pattern argument for use input/output arguments
@@ -124,7 +125,7 @@ const extractTask = new ExtractTask(cli.input, cli.output, {
 });
 
 // Parsers
-const parsers: ParserInterface[] = [new PipeParser(), new DirectiveParser(), new ServiceParser(), new MarkerParser()];
+const parsers: ParserInterface[] = [new PipeParser(), new DirectiveParser(), new ServiceParser(), new MarkerParser(), new TagParser()];
 extractTask.setParsers(parsers);
 
 // Post processors
