@@ -10,6 +10,8 @@ export * from './parsers/directive.parser.js';
 export * from './parsers/pipe.parser.js';
 export * from './parsers/service.parser.js';
 export * from './parsers/marker.parser.js';
+export * from './parsers/regexp.parser.js';
+export * from './parsers/tag.parser.js';
 
 export * from './compilers/compiler.interface.js';
 export * from './compilers/compiler.factory.js';
