@@ -16,6 +16,9 @@ export class RegexpParser implements ParserInterface {
 		const matches = sourceText.matchAll(TRANSLATION_STRING_REGEX);
 		const keys: string[] = [];
 		for (const match of matches) {
+			if (match[1].includes('|http') || match[1].includes('|not-set')) {
+				continue;
+			}
 			keys.push(match[1]);
 		}
 		if (keys.length > 0) {
