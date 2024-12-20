@@ -7,7 +7,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "npm run clean && tsc",
-		"deploy-to-defacto": "npm run build && cp -r dist ../wywiwyg/defacto/src/frontend/defacto/node_modules/ngx-translate-extract/ && cp -r dist ../wywiwyg/defacto/src/frontend/defacto/node_modules/@biesbjerg/ngx-translate-extract/ && cp -r dist ../wywiwyg/defacto/src/frontend/defacto/node_modules/@bartholomej/ngx-translate-extract/",
+		"deploy-to-defacto": "npm run build && cp -r dist ../W5G/defacto/src/frontend/defacto/node_modules/ngx-translate-extract/ && cp -r dist ../W5G/defacto/src/frontend/defacto/node_modules/@biesbjerg/ngx-translate-extract/ && cp -r dist ../W5G/defacto/src/frontend/defacto/node_modules/@bartholomej/ngx-translate-extract/",
 		"watch": "npm run clean && tsc --watch",
 		"clean": "rimraf ./dist",
 		"lint": "tslint --force './src/**/*.ts'",
